@@ -1,0 +1,123 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* home-section */
+
+  .home-sec .ContentOfSec .RightSide {
+    width: 75% !important;
+  }
+
+  .home-sec .ContentOfSec .LeftSide .hat {
+    padding: 0.4rem !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* Experience-section */
+
+  .Experience-sec .Exp-Content2 {
+    width: 75% !important;
+  }
+
+  .Experience-sec .Exp-Content2 img {
+    width: 15% !important;
+  }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    /* home-section */
+
+  .home-sec .nvbar .HeadNav h1 {
+    font-size: 1.2rem !important;
+    font-family: 500 !important;
+  }
+  .home-sec .nvbar .HeadNav h1:hover {
+    font-size: 1.2rem !important;
+  }
+  
+  .home-sec .nvbar .LIstOFnv ul .navLINK {
+    padding-left: 1rem !important;
+    font-size: 1.2rem !important;
+ 
+  }
+  
+  .home-sec .nvbar .LIstOFnv ul .navLINK::after {
+    height: 40px !important;
+    top: 15% !important;
+    left: 60% !important;
+  }
+
+  .home-sec .ContentOfSec {
+    justify-content: space-around !important;
+  }
+  
+  .home-sec .ContentOfSec .LeftSide h2 {
+    font-size: 1.8rem !important;
+    padding-bottom: 0rem !important;
+  }
+  
+  .home-sec .ContentOfSec .LeftSide p {
+    font-size: 0.5rem !important;
+  }
+  
+  .home-sec .ContentOfSec .LeftSide p::before {
+    font-size: 1.5rem !important;
+  }
+  
+  .home-sec .ContentOfSec .RightSide {
+    width: 85% !important;
+  }
+ 
+  .home-sec .ContentOfSec .LeftSide .hat {
+    padding: 0 !important;
+    padding-left: 0.1rem !important;
+    font-size: 1rem !important;
+    padding-top: 0 !important;
+  }
+  
+  /* About-sec */
+  .About-sec {
+    padding-top: 3rem !important;
+  }
+  
+  .About-sec .HeadOfSec h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .About-sec .contntOfSec {
+    width: 100% !important;
+    padding: 0.65rem !important;
+  }
+  
+  .About-sec .contntOfSec p {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Experience-section */
+  
+  .Experience-sec {
+    padding-top: 3rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .Experience-sec .HeadOfSec h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .Experience-sec .Tech-info {
+    font-size: 1.8rem !important;
+  }
+  
+  .Experience-sec .Exp-Content {
+    font-size: 1.3rem !important;
+  }
+  .Experience-sec .Exp-Content2 {
+    width: 100% !important;
+  }
+  
+  .Experience-sec .Exp-Content2 img {
+    width: 16.5% !important;
+    padding: 0!important;
+  }
+
+}

@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  font-family: "Alumni Sans", sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+body {
+  background-image: url(../imgs/night-sky-surreal-3840x2160-12658.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  cursor: cell;
+}
+
+:root {
+  --font-size-h1: 1.9rem;
+  --font-size-links: 1.5rem;
+  --main-color: rgb(255, 193, 193);
+  --padding-links: 1.35rem;
+  --pading-about1: 2.5rem;
+  --font-size-about-h2: 2.5rem;
+}
+
+/* home-section */
+.home-sec {
+  height: 100vh;
+}
+.home-sec .nvbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 5px 5px 30px rgb(221, 32, 32);
+}
+.home-sec .nvbar .HeadNav h1 {
+  font-size: var(--font-size-h1);
+  font-family: 800;
+  color: var(--main-color);
+}
+.home-sec .nvbar .HeadNav h1:hover {
+  font-size: var(--font-size-h1);
+  color: var(--main-color);
+  cursor: crosshair;
+  box-shadow: 10px 10px 80px rgb(221, 32, 32);
+  border-radius: 2%;
+}
+
+.home-sec .nvbar .LIstOFnv ul {
+  list-style: none;
+}
+
+.home-sec .nvbar .LIstOFnv ul a {
+  text-decoration: none;
+}
+
+.home-sec .nvbar .LIstOFnv ul .navLINK {
+  position: relative;
+  display: inline-block;
+  padding-left: var(--padding-links);
+  font-size: var(--font-size-links);
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+.home-sec .nvbar .LIstOFnv ul .navLINK::after {
+  content: " ";
+  width: 0;
+  height: 60px;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 63%;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+.home-sec .nvbar .LIstOFnv ul .navLINK:hover::after {
+  width: 3.5px;
+  background-color: rgb(57, 96, 224);
+  box-shadow: 5px 5px 10px rgb(221, 32, 32);
+  border-radius: 25%;
+}
+
+body:not(:has(:target)) .Home-link::after,
+body:has(.home-sec:target) .Home-link::after,
+body:has(.About-sec:target) .About-link::after,
+body:has(.Experience-sec:target) .Experience-link::after {
+  width: 3.5px !important;
+  background-color: rgb(57, 96, 224) !important;
+  box-shadow: 5px 5px 10px rgb(221, 32, 32) !important;
+  border-radius: 25% !important;
+}
+.home-sec .ContentOfSec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-sec .ContentOfSec .LeftSide {
+  text-align: center;
+  width: 100%;
+}
+
+.home-sec .ContentOfSec .LeftSide h2 {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  padding-bottom: 0.3rem;
+}
+
+.home-sec .ContentOfSec .LeftSide p {
+  font-size: var(--font-size-h1);
+  color: rgb(255, 122, 173);
+}
+
+.home-sec .ContentOfSec .LeftSide p::before {
+  content: " ";
+  text-align: left;
+  height: 1rem;
+  width: 1rem;
+  font-size: 2rem;
+  animation: typing 5s 1s infinite;
+}
+@keyframes typing {
+  0% {
+    content: "|";
+  }
+  20% {
+    content: "||Montaser||";
+  }
+  50% {
+    content: "||Shouzen||";
+  }
+  75% {
+    content: "||FrontEnd||";
+  }
+  85% {
+    content: "||Developer||";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+.home-sec .ContentOfSec .RightSide {
+  width: 50%;
+}
+.home-sec .ContentOfSec .RightSide img {
+  width: 100%;
+  cursor: crosshair;
+  border-radius: 4%;
+  border-end-end-radius: 40%;
+  border-start-start-radius: 40%;
+  transition: all 0.7s;
+}
+
+.home-sec .ContentOfSec .RightSide img:hover {
+  box-shadow: 5px 5px 50px rgb(221, 32, 32);
+  border-radius: 4%;
+}
+
+.home-sec .ContentOfSec .LeftSide .hat {
+  padding: 0.8rem;
+  padding-top: 0.6rem;
+  cursor: pointer;
+  transition: all 0.45s;
+}
+.home-sec .ContentOfSec .LeftSide a {
+  color: rgb(236, 130, 130);
+}
+.home-sec .ContentOfSec .LeftSide .hat:hover {
+  box-shadow: 5px 5px 50px rgb(221, 32, 32);
+  border-radius: 50%;
+  background-color: rgb(103, 189, 189);
+}
+
+/* About-sec */
+.About-sec {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.About-sec .HeadOfSec h2 {
+  color: var(--main-color);
+  font-size: var(--font-size-about-h2);
+}
+
+.About-sec .contntOfSec {
+  width: 75%;
+  margin: auto;
+  padding: var(--padding-links);
+  transition: all 0.5s;
+}
+
+.About-sec .contntOfSec p {
+  text-align: left;
+  color: var(--main-color);
+  font-size: var(--font-size-links);
+  text-shadow: 2px 2px 2px rgb(221, 32, 32);
+}
+
+.About-sec .contntOfSec:hover {
+  box-shadow: 15px 15px 100px rgb(221, 32, 32);
+  padding: var(--padding-links);
+  border-radius: 25%;
+}
+
+/* Experience-section */
+
+.Experience-sec {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+}
+
+.Experience-sec .HeadOfSec h2 {
+  text-align: center;
+  color: var(--main-color);
+  font-size: var(--font-size-about-h2);
+}
+
+.Experience-sec .Tech-info {
+  text-align: center;
+  color: var(--main-color);
+  font-size: var(--font-size-about-h2);
+}
+
+.Experience-sec .Exp-Content {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+.Experience-sec .Exp-Content ul {
+  list-style: none;
+}
+
+.Experience-sec .Exp-Content2 {
+  width: 50%;
+  display: flex;
+  margin: auto;
+}
+
+.Experience-sec .Exp-Content2 img {
+  width: 15%;
+  padding: 0.5rem;
+}
+
+.Experience-sec .contentofSC {
+  width: 75%;
+  margin: auto;
+  padding: var(--padding-links);
+  transition: all 0.55s;
+}
+.Experience-sec .contentofSC:hover {
+  box-shadow: 15px 15px 100px rgb(221, 32, 32);
+  padding: var(--padding-links);
+  border-radius: 25%;
+}
+
+/* Loading-Screen */
+
+.Loading-Scr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgb(23, 27, 44) 42%,
+    rgb(57, 49, 68) 65%,
+    rgb(58, 39, 39) 100%
+  );
+  z-index: 99999999999999999999999999999999;
+  height: 100vh;
+  display: none;
+}
+
+.Loading-Scr .LoadN {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.Loading-Scr .LoadN .sol {
+  color: var(--main-color);
+  transition: all 0.45s;
+}
+.Loading-Scr .LoadN .sol:hover {
+  box-shadow: 10px 10px 200px rgb(221, 32, 32);
+  background-color: rgba(221, 32, 32, 0.2);
+  border-radius: 20%;
+}
+
+.Loading-Scr .LoadN .soll {
+  color: rgb(255, 122, 173);
+  font-weight: 600;
+  transition: all 0.45s;
+}
+.Loading-Scr .LoadN .soll:hover {
+  box-shadow: 10px 10px 200px rgb(221, 32, 32);
+  background-color: rgba(221, 32, 32, 0.2);
+  border-radius: 20%;
+}
